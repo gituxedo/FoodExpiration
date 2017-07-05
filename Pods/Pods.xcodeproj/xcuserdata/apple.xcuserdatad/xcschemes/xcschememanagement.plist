@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>JTCalendar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-FoodExpiration.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,7 +22,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>C1C4EB4AC4C0372805B68C95100DD7CD</key>
+		<key>3C4C61C0DBF7851B2EE7F92F1D3E16EE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>91D0AFD51BF2D04784321D0DCD086326</key>
 		<dict>
 			<key>primary</key>
 			<true/>

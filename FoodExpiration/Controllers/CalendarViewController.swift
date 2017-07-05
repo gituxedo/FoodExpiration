@@ -23,10 +23,10 @@ class CalendarViewController: UIViewController, CVCalendarViewDelegate, CVCalend
         self.calendarView = CVCalendarView(frame: CGRect(x: 0, y: 20, width: 300, height: 450))
         
         // Appearance delegate [Unnecessary]
-        self.calendarView.calendarAppearanceDelegate = self
+        //self.calendarView.calendarAppearanceDelegate = self
         
         // Animator delegate [Unnecessary]
-        self.calendarView.animatorDelegate = self
+        //self.calendarView.animatorDelegate = self
         
         // Menu delegate [Required]
         self.menuView.menuViewDelegate = self

@@ -1,12 +1,15 @@
 PODS:
   - CVCalendar (1.5.0)
+  - JTCalendar (2.1.9)
 
 DEPENDENCIES:
   - CVCalendar (~> 1.5.0)
+  - JTCalendar (~> 2.0)
 
 SPEC CHECKSUMS:
   CVCalendar: 5d51a7bda1b9439b612de69d86a91a73befa1936
+  JTCalendar: beb2f4c1b639bf6880f680b4858227acf83a049c
 
-PODFILE CHECKSUM: 635c2b655f2265a43278cadecac81b1755198e98
+PODFILE CHECKSUM: a9a9fc4a88ff0bc982927e6f64c659da8e55ba44
 
 COCOAPODS: 1.2.1

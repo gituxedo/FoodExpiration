@@ -117,7 +117,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Select date"/>
                                 <connections>
-                                    <segue destination="PNk-kz-5Us" kind="show" id="rEZ-zc-D0U"/>
+                                    <segue destination="DEl-db-R6t" kind="show" id="aJU-R3-mM8"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Expiration date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fg-L4-AhD">
@@ -134,6 +134,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TTJ-k9-JGh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3429.5999999999999" y="542.87856071964018"/>
+        </scene>
+        <!--Select Date-->
+        <scene sceneID="hc9-Mr-1kt">
+            <objects>
+                <viewController id="DEl-db-R6t" userLabel="Select Date" customClass="DatePickerViewController" customModule="FoodExpiration" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QIa-kc-oHi"/>
+                        <viewControllerLayoutGuide type="bottom" id="yhE-H9-8kb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="REK-4L-HIa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MM/DD/YY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Df4-8U-5hk">
+                                <rect key="frame" x="145" y="79" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ezv-0R-E4T">
+                                <rect key="frame" x="27" y="115" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="520982741.48978603">
+                                    <!--2017-07-05 21:25:41 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="datePickerChanged:" destination="DEl-db-R6t" eventType="valueChanged" id="sI5-TR-EmV"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Df4-8U-5hk" firstAttribute="centerX" secondItem="REK-4L-HIa" secondAttribute="centerX" id="3aZ-hO-Mik"/>
+                            <constraint firstItem="ezv-0R-E4T" firstAttribute="top" secondItem="Df4-8U-5hk" secondAttribute="bottom" constant="15" id="fy3-bK-wEp"/>
+                            <constraint firstItem="ezv-0R-E4T" firstAttribute="centerX" secondItem="REK-4L-HIa" secondAttribute="centerX" id="iwf-A7-55D"/>
+                            <constraint firstItem="Df4-8U-5hk" firstAttribute="top" secondItem="QIa-kc-oHi" secondAttribute="bottom" constant="15" id="o8q-Ub-t6R"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="Df4-8U-5hk" id="gE1-0l-vLS"/>
+                        <outlet property="datePicker" destination="ezv-0R-E4T" id="aqI-Z9-SCA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OFZ-oL-ad0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4122" y="543"/>
         </scene>
         <!--Calendar View Controller-->
         <scene sceneID="5E8-XR-Hmq">
@@ -167,7 +212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BO3-wQ-0LN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4234" y="543"/>
+            <point key="canvasLocation" x="3758" y="1204"/>
         </scene>
         <!--Settings-->
         <scene sceneID="tXz-JV-rWm">

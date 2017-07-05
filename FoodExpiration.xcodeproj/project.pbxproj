@@ -16,7 +16,7 @@
 		18C278841F0D55FD00C7A312 /* HomeScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C278831F0D55FD00C7A312 /* HomeScreenTableViewCell.swift */; };
 		18C278871F0D626400C7A312 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C278861F0D626400C7A312 /* CoreData.framework */; };
 		18C2788A1F0D644D00C7A312 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18C278881F0D644D00C7A312 /* Model.xcdatamodeld */; };
-		18C2788C1F0D689C00C7A312 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C2788B1F0D689C00C7A312 /* CalendarViewController.swift */; };
+		18C278901F0D917700C7A312 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C2788F1F0D917700C7A312 /* DatePickerViewController.swift */; };
 		86EF3374C865A67AECC797A1 /* Pods_FoodExpiration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE81977CC91DEDC7E948BF5 /* Pods_FoodExpiration.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +32,7 @@
 		18C278831F0D55FD00C7A312 /* HomeScreenTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeScreenTableViewCell.swift; path = Views/HomeScreenTableViewCell.swift; sourceTree = "<group>"; };
 		18C278861F0D626400C7A312 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		18C278891F0D644D00C7A312 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		18C2788B1F0D689C00C7A312 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarViewController.swift; path = Controllers/CalendarViewController.swift; sourceTree = "<group>"; };
+		18C2788F1F0D917700C7A312 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatePickerViewController.swift; path = Controllers/DatePickerViewController.swift; sourceTree = "<group>"; };
 		2D422BA4B65A23915E72EA37 /* Pods-FoodExpiration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodExpiration.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodExpiration/Pods-FoodExpiration.debug.xcconfig"; sourceTree = "<group>"; };
 		2E8506F9774082201FAE0AE9 /* Pods-FoodExpiration.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodExpiration.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodExpiration/Pods-FoodExpiration.release.xcconfig"; sourceTree = "<group>"; };
 		3DE81977CC91DEDC7E948BF5 /* Pods_FoodExpiration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodExpiration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,24 +83,23 @@
 			children = (
 				18B76F341F0B07D200845717 /* AppDelegate.swift */,
 				18C278881F0D644D00C7A312 /* Model.xcdatamodeld */,
-				18B76F361F0B07D200845717 /* ViewController.swift */,
-				18B76F381F0B07D200845717 /* Main.storyboard */,
+				18C2788E1F0D8EB600C7A312 /* Storyboards */,
 				18B76F3B1F0B07D200845717 /* Assets.xcassets */,
-				18C2787F1F0D4EA600C7A312 /* Controllers */,
-				18B76F3D1F0B07D200845717 /* LaunchScreen.storyboard */,
-				18B76F401F0B07D200845717 /* Info.plist */,
+				18C2787F1F0D4EA600C7A312 /* View Controllers */,
+				18C2788D1F0D8E9700C7A312 /* Supporting Files */,
 				18C278821F0D523C00C7A312 /* Views */,
 			);
 			path = FoodExpiration;
 			sourceTree = "<group>";
 		};
-		18C2787F1F0D4EA600C7A312 /* Controllers */ = {
+		18C2787F1F0D4EA600C7A312 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				18B76F361F0B07D200845717 /* ViewController.swift */,
 				18C2787D1F0D4EA000C7A312 /* HomeScreenViewController.swift */,
-				18C2788B1F0D689C00C7A312 /* CalendarViewController.swift */,
+				18C2788F1F0D917700C7A312 /* DatePickerViewController.swift */,
 			);
-			name = Controllers;
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 		18C278821F0D523C00C7A312 /* Views */ = {
@@ -118,6 +117,23 @@
 				3DE81977CC91DEDC7E948BF5 /* Pods_FoodExpiration.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		18C2788D1F0D8E9700C7A312 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				18B76F3D1F0B07D200845717 /* LaunchScreen.storyboard */,
+				18B76F401F0B07D200845717 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18C2788E1F0D8EB600C7A312 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				18B76F381F0B07D200845717 /* Main.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,9 +259,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18C2788C1F0D689C00C7A312 /* CalendarViewController.swift in Sources */,
 				18C278841F0D55FD00C7A312 /* HomeScreenTableViewCell.swift in Sources */,
 				18B76F371F0B07D200845717 /* ViewController.swift in Sources */,
+				18C278901F0D917700C7A312 /* DatePickerViewController.swift in Sources */,
 				18C2788A1F0D644D00C7A312 /* Model.xcdatamodeld in Sources */,
 				18B76F351F0B07D200845717 /* AppDelegate.swift in Sources */,
 				18C2787E1F0D4EA000C7A312 /* HomeScreenViewController.swift in Sources */,
