@@ -12,6 +12,12 @@
 		18B76F3A1F0B07D200845717 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B76F381F0B07D200845717 /* Main.storyboard */; };
 		18B76F3C1F0B07D200845717 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B76F3B1F0B07D200845717 /* Assets.xcassets */; };
 		18B76F3F1F0B07D200845717 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B76F3D1F0B07D200845717 /* LaunchScreen.storyboard */; };
+		18C2787E1F0D4EA000C7A312 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C2787D1F0D4EA000C7A312 /* HomeScreenViewController.swift */; };
+		18C278841F0D55FD00C7A312 /* HomeScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C278831F0D55FD00C7A312 /* HomeScreenTableViewCell.swift */; };
+		18C278871F0D626400C7A312 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C278861F0D626400C7A312 /* CoreData.framework */; };
+		18C2788A1F0D644D00C7A312 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18C278881F0D644D00C7A312 /* Model.xcdatamodeld */; };
+		18C2788C1F0D689C00C7A312 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C2788B1F0D689C00C7A312 /* CalendarViewController.swift */; };
+		86EF3374C865A67AECC797A1 /* Pods_FoodExpiration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE81977CC91DEDC7E948BF5 /* Pods_FoodExpiration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,14 @@
 		18B76F3B1F0B07D200845717 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18B76F3E1F0B07D200845717 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18B76F401F0B07D200845717 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18C2787D1F0D4EA000C7A312 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeScreenViewController.swift; path = Controllers/HomeScreenViewController.swift; sourceTree = "<group>"; };
+		18C278831F0D55FD00C7A312 /* HomeScreenTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeScreenTableViewCell.swift; path = Views/HomeScreenTableViewCell.swift; sourceTree = "<group>"; };
+		18C278861F0D626400C7A312 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		18C278891F0D644D00C7A312 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		18C2788B1F0D689C00C7A312 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarViewController.swift; path = Controllers/CalendarViewController.swift; sourceTree = "<group>"; };
+		2D422BA4B65A23915E72EA37 /* Pods-FoodExpiration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodExpiration.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodExpiration/Pods-FoodExpiration.debug.xcconfig"; sourceTree = "<group>"; };
+		2E8506F9774082201FAE0AE9 /* Pods-FoodExpiration.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodExpiration.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodExpiration/Pods-FoodExpiration.release.xcconfig"; sourceTree = "<group>"; };
+		3DE81977CC91DEDC7E948BF5 /* Pods_FoodExpiration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodExpiration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +43,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C278871F0D626400C7A312 /* CoreData.framework in Frameworks */,
+				86EF3374C865A67AECC797A1 /* Pods_FoodExpiration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01C0E30D3C516450394CC208 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D422BA4B65A23915E72EA37 /* Pods-FoodExpiration.debug.xcconfig */,
+				2E8506F9774082201FAE0AE9 /* Pods-FoodExpiration.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		18B76F281F0B07D200845717 = {
 			isa = PBXGroup;
 			children = (
 				18B76F331F0B07D200845717 /* FoodExpiration */,
 				18B76F321F0B07D200845717 /* Products */,
+				18C278851F0D626400C7A312 /* Frameworks */,
+				01C0E30D3C516450394CC208 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +82,42 @@
 			isa = PBXGroup;
 			children = (
 				18B76F341F0B07D200845717 /* AppDelegate.swift */,
+				18C278881F0D644D00C7A312 /* Model.xcdatamodeld */,
 				18B76F361F0B07D200845717 /* ViewController.swift */,
 				18B76F381F0B07D200845717 /* Main.storyboard */,
 				18B76F3B1F0B07D200845717 /* Assets.xcassets */,
+				18C2787F1F0D4EA600C7A312 /* Controllers */,
 				18B76F3D1F0B07D200845717 /* LaunchScreen.storyboard */,
 				18B76F401F0B07D200845717 /* Info.plist */,
+				18C278821F0D523C00C7A312 /* Views */,
 			);
 			path = FoodExpiration;
+			sourceTree = "<group>";
+		};
+		18C2787F1F0D4EA600C7A312 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				18C2787D1F0D4EA000C7A312 /* HomeScreenViewController.swift */,
+				18C2788B1F0D689C00C7A312 /* CalendarViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		18C278821F0D523C00C7A312 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				18C278831F0D55FD00C7A312 /* HomeScreenTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		18C278851F0D626400C7A312 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18C278861F0D626400C7A312 /* CoreData.framework */,
+				3DE81977CC91DEDC7E948BF5 /* Pods_FoodExpiration.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +127,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18B76F431F0B07D200845717 /* Build configuration list for PBXNativeTarget "FoodExpiration" */;
 			buildPhases = (
+				FFFDEA7CEDBEA4F64FF40357 /* [CP] Check Pods Manifest.lock */,
 				18B76F2D1F0B07D200845717 /* Sources */,
 				18B76F2E1F0B07D200845717 /* Frameworks */,
 				18B76F2F1F0B07D200845717 /* Resources */,
+				5EA8DE4C91C21413D488D162 /* [CP] Embed Pods Frameworks */,
+				05013ABF2BB5E3D54F28396F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,13 +190,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		05013ABF2BB5E3D54F28396F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoodExpiration/Pods-FoodExpiration-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5EA8DE4C91C21413D488D162 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoodExpiration/Pods-FoodExpiration-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFFDEA7CEDBEA4F64FF40357 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		18B76F2D1F0B07D200845717 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C2788C1F0D689C00C7A312 /* CalendarViewController.swift in Sources */,
+				18C278841F0D55FD00C7A312 /* HomeScreenTableViewCell.swift in Sources */,
 				18B76F371F0B07D200845717 /* ViewController.swift in Sources */,
+				18C2788A1F0D644D00C7A312 /* Model.xcdatamodeld in Sources */,
 				18B76F351F0B07D200845717 /* AppDelegate.swift in Sources */,
+				18C2787E1F0D4EA000C7A312 /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +369,7 @@
 		};
 		18B76F441F0B07D200845717 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D422BA4B65A23915E72EA37 /* Pods-FoodExpiration.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FoodExpiration/Info.plist;
@@ -270,6 +382,7 @@
 		};
 		18B76F451F0B07D200845717 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E8506F9774082201FAE0AE9 /* Pods-FoodExpiration.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FoodExpiration/Info.plist;
@@ -299,8 +412,23 @@
 				18B76F451F0B07D200845717 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		18C278881F0D644D00C7A312 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				18C278891F0D644D00C7A312 /* Model.xcdatamodel */,
+			);
+			currentVersion = 18C278891F0D644D00C7A312 /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = Models/Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 18B76F291F0B07D200845717 /* Project object */;
 }
