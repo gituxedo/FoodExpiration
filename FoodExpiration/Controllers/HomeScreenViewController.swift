@@ -12,18 +12,21 @@ import CoreData
 
 class HomeScreenViewController: UITableViewController {
     
+    var foods = [Food]() {
+        didSet { tableView.reloadData() }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        foods = CoreDataHelper.retrieveFoods()
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 10 //foods.count
     }
     
     // 2
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "homeScreenTableViewCell", for: indexPath) as! HomeScreenTableViewCell
-        //let row = indexPath.row
-        //cell.textLabel?.text = "your mum"
         cell.foodLabel.text = "food name"
         cell.dateExpiryLabel.text = "Date until expiry"
         return cell
@@ -37,5 +40,20 @@ class HomeScreenViewController: UITableViewController {
                 print("+ button tapped")
             }
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        // 2
+        if editingStyle == .delete {
+            CoreDataHelper.delete(food: foods[indexPath.row])
+            foods = CoreDataHelper.retrieveFoods()
+        }
+    }
+    
+    @IBAction func unwindToHomeScreenViewController(_ segue: UIStoryboardSegue) {
+        
+        // for now, simply defining the method is sufficient.
+        // we'll add code later
+        self.foods = CoreDataHelper.retrieveFoods()
     }
 }

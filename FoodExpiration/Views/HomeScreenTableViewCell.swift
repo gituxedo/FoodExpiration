@@ -15,4 +15,12 @@ class HomeScreenTableViewCell: UITableViewCell {
     @IBOutlet weak var foodLabel: UILabel!
     @IBOutlet weak var dateExpiryLabel: UILabel!
     
+    @IBAction func unwindToHomeScreenViewController(_ segue: UIStoryboardSegue) {
+        
+        // for now, simply defining the method is sufficient.
+        // we'll add code later
+        
+    }
+    
+    
 }
