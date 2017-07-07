@@ -11,6 +11,8 @@ import UIKit
 
 class DatePickerViewController: UIViewController {
     
+    var strDate:String = ""
+    
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
     
@@ -19,10 +21,13 @@ class DatePickerViewController: UIViewController {
         
         dateFormatter.dateStyle = DateFormatter.Style.short
         
-        let strDate = dateFormatter.string(from: datePicker.date)
+        strDate = dateFormatter.string(from: datePicker.date)
         dateLabel.text = strDate
     }
     
+    func returnDate() -> String {
+        return strDate
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
     }

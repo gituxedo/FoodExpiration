@@ -45,14 +45,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: - Core Data stack
     
-    func applicationWillTerminate(application: UIApplication)
-        
-    {
-        self.saveContext()
-    }
-    
-    // MARK: - Core Data stack
-    
     lazy var applicationDocumentsDirectory: NSURL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "com.Coredatatestapp" in the application's documents Application Support directory.
         let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
@@ -61,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     lazy var managedObjectModel: NSManagedObjectModel = {
         // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
-        let modelURL = Bundle.main.url(forResource: "Coredatatestapp", withExtension: "momd")!
+        let modelURL = Bundle.main.url(forResource: "FoodExpiration", withExtension: "momd")!
         return NSManagedObjectModel(contentsOf: modelURL)!
     }()
     
@@ -83,8 +75,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let wrappedError = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict)
             // Replace this with code to handle the error appropriately.
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog("Unresolved error \(wrappedError), \(wrappedError.userInfo)")
-            abort()
+            fatalError("Unresolved error \(wrappedError), \(wrappedError.userInfo)")
         }
         
         return coordinator
@@ -128,9 +119,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
     
     func saveContext () {
-        if managedObjectContext.hasChanges {
+        let context = persistentContainer.viewContext
+        if context.hasChanges {
             do {
-                try managedObjectContext.save()
+                try context.save()
             } catch {
                 // Replace this implementation with code to handle the error appropriately.
                 // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.

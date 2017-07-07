@@ -6,7 +6,6 @@ target ‘FoodExpiration’ do
   use_frameworks!
 
   # Pods for FoodExpiration
-  pod 'CVCalendar', '~> 1.5.0'
   pod 'JTCalendar', '~> 2.0'
 
 end
