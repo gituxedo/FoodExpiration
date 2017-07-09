@@ -18,21 +18,19 @@ class HomeScreenViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         foods = CoreDataHelper.retrieveFoods()
-        foods = bubble(dates:&foods)
+        foods = bubble(foods:&foods)
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foods.count
     }
     
-    
-    // 2
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        foods = bubble(dates:&foods)
         let cell = tableView.dequeueReusableCell(withIdentifier: "homeScreenTableViewCell", for: indexPath) as! HomeScreenTableViewCell
         let row = indexPath.row
         let food = foods[row]
         cell.foodLabel.text = food.name
         cell.dateExpiryLabel.text = "\(Int(0.5 + past(time: food.dateExpiry!))) days"
+        cell.categoryLabel.text = food.category
         cell.dateExpiryLabel.textColor = .black
         cell.dateExpiryLabel.backgroundColor = .white
         if past(time: food.dateExpiry!) < 0.5 {
@@ -60,31 +58,23 @@ class HomeScreenViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        // 2
         if editingStyle == .delete {
             CoreDataHelper.delete(food: foods[indexPath.row])
             foods = CoreDataHelper.retrieveFoods()
+            foods = bubble(foods:&foods)
         }
     }
     
     @IBAction func unwindToHomeScreenViewController(_ segue: UIStoryboardSegue) {
         self.foods = CoreDataHelper.retrieveFoods()
+        foods = bubble(foods:&foods)
     }
     
-    func find(arr: [Food], item:Food) -> Int {
-        var count:Int = 0
-        for i in arr {
-            if i == item {
-                return count
-            }; count += 1
-        }; return -1
-    }
-    
-    public func bubble(dates: inout [Food]) -> [Food] {
-        for i in (0..<dates.count).reversed() {
-            for j in 0..<i where dates[j].dateExpiry! > dates[j + 1].dateExpiry! {
-                swap(&dates[j], &dates[j + 1])
+    public func bubble(foods: inout [Food]) -> [Food] {
+        for i in (0..<foods.count).reversed() {
+            for j in 0..<i where foods[j].dateExpiry! > foods[j + 1].dateExpiry! {
+                swap(&foods[j], &foods[j + 1])
             }
-        }; return dates
+        }; return foods
     }
 }

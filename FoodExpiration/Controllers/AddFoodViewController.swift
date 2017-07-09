@@ -18,7 +18,7 @@ class AddFoodViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         super.viewDidLoad()
         self.categoryPicker.delegate = self
         self.categoryPicker.dataSource = self
-        pickerData = ["Meat", "Dairy", "Vegetable", "Fruit", "Other"]
+        pickerData = ["Meat", "Dairy", "Vegetable", "Fruit", "Beverage", "Other"]
         
     }
     
@@ -31,11 +31,6 @@ class AddFoodViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBAction func goBackToOneButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "cancel", sender: self)
     }
-    
-//    static func updateLabel(label: UILabel)->String {
-//        let size = pickerData[categoryPicker.selectedRow(inComponent: 0)]
-//        return size
-//    }
     
     @IBAction func datePickerChanged(_ sender: Any) {
         let dateFormatter = DateFormatter()
@@ -54,9 +49,9 @@ class AddFoodViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                 print("Save button tapped")
                 let food = self.food ?? CoreDataHelper.newFood()
                 food.name = foodNameTextField.text ?? ""
-//                food.category = foodCategoryTextField.text ?? ""
                 food.dateExpiry = datePicker.date as NSDate
-//                food.category = pickerData[categoryPicker.selectedRow(inComponent: 0)]
+                food.category = pickerData[categoryPicker.selectedRow(inComponent: 0)]
+                CoreDataHelper.saveFood()
                 let homeScreenViewController = segue.destination as! HomeScreenViewController
                 homeScreenViewController.foods.append(food)
             }
@@ -67,10 +62,8 @@ class AddFoodViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         super.viewWillAppear(animated)
         if let food = food {
             foodNameTextField.text = food.name
-//            foodCategoryTextField.text = food.category
         } else {
             foodNameTextField.text = ""
-//            foodCategoryTextField.text = ""
         }
     }
     
